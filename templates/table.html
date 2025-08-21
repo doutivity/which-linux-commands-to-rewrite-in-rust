@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linux Commands Rewritten in Rust</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .subtable {
+            margin-left: 20px;
+            border-collapse: collapse;
+        }
+
+        .subtable td, .subtable th {
+            border: 1px solid #aaa;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+<h1>Linux Commands Rewritten in Rust</h1>
+<table>
+    <tr>
+        <th>Command (C)</th>
+        <th>C Repo</th>
+        <th>C Stars</th>
+        <th>C LoC</th>
+        <th>Rust Implementations</th>
+        <th>Search More</th>
+    </tr>
+    {{range .}}
+    <tr>
+        <td>{{.Original.OriginalCommandName}}</td>
+        <td><a href="{{.Original.OriginalRepositoryURL}}" target="_blank">Link</a></td>
+        <td>{{.Original.OriginalRepositoryStars}}</td>
+        <td>{{.Original.OriginalRepositoryLoC}}</td>
+        <td>
+            <table class="subtable">
+                <tr>
+                    <th>Rust Name</th>
+                    <th>Repo</th>
+                    <th>Stars</th>
+                    <th>LoC</th>
+                </tr>
+                {{range .Rust}}
+                <tr>
+                    <td>{{.RustCommandName}}</td>
+                    <td>{{if .RustRepositoryURL}}<a href="{{.RustRepositoryURL}}" target="_blank">Link</a>{{end}}</td>
+                    <td>{{.RustRepositoryStars}}</td>
+                    <td>{{.RustRepositoryLoC}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </td>
+        <td>
+            <a href="{{GitHubSearchURL .Original.OriginalCommandName}}" target="_blank">GitHub</a> |
+            <a href="{{GoogleSearchURL .Original.OriginalCommandName}}" target="_blank">Google</a>
+        </td>
+    </tr>
+    {{end}}
+</table>
+</body>
+</html>
