@@ -2,35 +2,18 @@ package main
 
 import (
 	"log"
-	"os"
-	"text/template"
 
 	"github.com/doutivity/which-linux-commands-to-rewrite-in-rust/internal/data"
-	"github.com/doutivity/which-linux-commands-to-rewrite-in-rust/internal/utils"
+	"github.com/doutivity/which-linux-commands-to-rewrite-in-rust/internal/markdown"
 )
 
 func main() {
 	commands := data.Commands()
 
-	funcMap := template.FuncMap{
-		"GoogleSearchURL": utils.GoogleSearchURL,
-		"GitHubSearchURL": utils.GitHubSearchURL,
-	}
-
-	tmpl, err := template.New("table.html").Funcs(funcMap).ParseFiles("templates/table.html")
+	err := markdown.GenerateFile(commands, "commands.md")
 	if err != nil {
-		log.Fatalf("cannot parse template: %v", err)
+		log.Fatalf("cannot generate markdown: %v", err)
 	}
 
-	outFile, err := os.Create("commands.html")
-	if err != nil {
-		log.Fatalf("cannot create HTML file: %v", err)
-	}
-	defer outFile.Close()
-
-	if err := tmpl.Execute(outFile, commands); err != nil {
-		log.Fatalf("cannot execute template: %v", err)
-	}
-
-	log.Println("HTML table generated: commands.html")
+	log.Println("Markdown table generated: commands.md")
 }
