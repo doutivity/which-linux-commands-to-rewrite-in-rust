@@ -199,5 +199,23 @@ func Commands() []models.CommandTransition {
 			},
 			Rust: []models.RustCommand{},
 		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "ffmpeg",
+				OriginalRepositoryURL:   "https://github.com/FFmpeg/FFmpeg",
+				OriginalRepositoryStars: 52539,
+				OriginalRepositoryLoC:   1538205, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "f3",
+				OriginalRepositoryURL:   "https://github.com/AltraMayor/f3",
+				OriginalRepositoryStars: 2937,
+				OriginalRepositoryLoC:   6368, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
 	}
 }
