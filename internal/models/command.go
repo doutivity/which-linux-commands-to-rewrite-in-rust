@@ -1,5 +1,9 @@
 package models
 
+const (
+	Ratatui = "[Ratatui](https://github.com/ratatui/ratatui)"
+)
+
 type CommandTransition struct {
 	Original OriginalCommand
 	Rust     []RustCommand
@@ -17,4 +21,6 @@ type RustCommand struct {
 	RustRepositoryURL   string // URL of the repository with the command rewritten in Rust
 	RustRepositoryStars int    // Number of stars of the Rust repository
 	RustRepositoryLoC   int    // Lines of code in the Rust repository
+	TUI                 string // Information about whether the Rust command has a TUI (Text User Interface) and which library it uses
+	SponsorsURL         string // URL for sponsoring the Rust project (if available)
 }
