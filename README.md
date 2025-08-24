@@ -15,3 +15,11 @@ The article will be:
 - 🌍 Later translated and published in English on [Reddit's r/rust](https://www.reddit.com/r/rust/)
 
 Links will be added here after publication.
+
+## How to Contribute
+
+We welcome contributions! If you would like to add a new command to the list, please follow these rules:
+
+1. The command must be a **well-known command written in C**.
+2. There must be an **existing Rust repository** implementing this command with **100+ GitHub stars**.
+3. All changes should be made **only in** [`internal/data/commands.go`](https://github.com/doutivity/which-linux-commands-to-rewrite-in-rust/blob/main/internal/data/commands.go).
