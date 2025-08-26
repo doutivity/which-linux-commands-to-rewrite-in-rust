@@ -243,6 +243,24 @@ func Commands() []models.CommandTransition {
 		},
 		{
 			Original: models.OriginalCommand{
+				OriginalCommandName:     "rmdir",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/rmdir.c",
+				OriginalRepositoryStars: coreutilsRepositoryStars,
+				OriginalRepositoryLoC:   259,
+			},
+			Rust: []models.RustCommand{
+				{
+					RustCommandName:     "rmdir",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/rmdir",
+					RustRepositoryStars: uutilsRepositoryStars,
+					RustRepositoryLoC:   0,
+					TUI:                 "",
+					SponsorsURL:         "",
+				},
+			},
+		},
+		{
+			Original: models.OriginalCommand{
 				OriginalCommandName:     "mv",
 				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/mv.c",
 				OriginalRepositoryStars: coreutilsRepositoryStars,
