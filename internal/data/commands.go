@@ -75,6 +75,24 @@ func Commands() []models.CommandTransition {
 		},
 		{
 			Original: models.OriginalCommand{
+				OriginalCommandName:     "du",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/du.c",
+				OriginalRepositoryStars: coreutilsRepositoryStars,
+				OriginalRepositoryLoC:   963,
+			},
+			Rust: []models.RustCommand{
+				{
+					RustCommandName:     "du",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/du",
+					RustRepositoryStars: uutilsRepositoryStars,
+					RustRepositoryLoC:   0,
+					TUI:                 "",
+					SponsorsURL:         "",
+				},
+			},
+		},
+		{
+			Original: models.OriginalCommand{
 				OriginalCommandName:     "echo",
 				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/echo.c",
 				OriginalRepositoryStars: coreutilsRepositoryStars,
@@ -93,15 +111,33 @@ func Commands() []models.CommandTransition {
 		},
 		{
 			Original: models.OriginalCommand{
-				OriginalCommandName:     "du",
-				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/du.c",
+				OriginalCommandName:     "env",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/env.c",
 				OriginalRepositoryStars: coreutilsRepositoryStars,
-				OriginalRepositoryLoC:   963,
+				OriginalRepositoryLoC:   792,
 			},
 			Rust: []models.RustCommand{
 				{
-					RustCommandName:     "du",
-					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/du",
+					RustCommandName:     "env",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/env",
+					RustRepositoryStars: uutilsRepositoryStars,
+					RustRepositoryLoC:   0,
+					TUI:                 "",
+					SponsorsURL:         "",
+				},
+			},
+		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "false",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/false.c",
+				OriginalRepositoryStars: coreutilsRepositoryStars,
+				OriginalRepositoryLoC:   2,
+			},
+			Rust: []models.RustCommand{
+				{
+					RustCommandName:     "false",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/false",
 					RustRepositoryStars: uutilsRepositoryStars,
 					RustRepositoryLoC:   0,
 					TUI:                 "",
