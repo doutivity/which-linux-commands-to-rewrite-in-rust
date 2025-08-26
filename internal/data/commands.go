@@ -10,6 +10,12 @@ const (
 )
 
 func Commands() []models.CommandTransition {
+	/*
+		Skipped commands:
+		- cd (built-in shell command) https://cgit.git.savannah.gnu.org/cgit/bash.git/tree/builtins/cd.def
+		- alias (built-in shell command) https://cgit.git.savannah.gnu.org/cgit/bash.git/tree/builtins/alias.def
+	*/
+
 	return []models.CommandTransition{
 		{
 			Original: models.OriginalCommand{
