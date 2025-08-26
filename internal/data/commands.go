@@ -433,5 +433,14 @@ func Commands() []models.CommandTransition {
 			},
 			Rust: []models.RustCommand{},
 		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "curl",
+				OriginalRepositoryURL:   "https://github.com/curl/curl",
+				OriginalRepositoryStars: 38653,
+				OriginalRepositoryLoC:   312057, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
 	}
 }
