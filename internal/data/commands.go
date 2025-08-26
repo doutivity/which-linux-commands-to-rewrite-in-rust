@@ -466,5 +466,23 @@ func Commands() []models.CommandTransition {
 			},
 			Rust: []models.RustCommand{},
 		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "nano",
+				OriginalRepositoryURL:   "https://github.com/madnight/nano",
+				OriginalRepositoryStars: 142,
+				OriginalRepositoryLoC:   18628, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "wget",
+				OriginalRepositoryURL:   "https://github.com/mirror/wget",
+				OriginalRepositoryStars: 422,
+				OriginalRepositoryLoC:   50382, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
 	}
 }
