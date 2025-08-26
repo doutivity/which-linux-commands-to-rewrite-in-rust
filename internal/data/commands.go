@@ -441,6 +441,42 @@ func Commands() []models.CommandTransition {
 		},
 		{
 			Original: models.OriginalCommand{
+				OriginalCommandName:     "uptime",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/uptime.c",
+				OriginalRepositoryStars: coreutilsRepositoryStars,
+				OriginalRepositoryLoC:   177,
+			},
+			Rust: []models.RustCommand{
+				{
+					RustCommandName:     "uptime",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/uptime",
+					RustRepositoryStars: uutilsRepositoryStars,
+					RustRepositoryLoC:   0,
+					TUI:                 "",
+					SponsorsURL:         "",
+				},
+			},
+		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "whoami",
+				OriginalRepositoryURL:   "https://github.com/coreutils/coreutils/blob/master/src/whoami.c",
+				OriginalRepositoryStars: coreutilsRepositoryStars,
+				OriginalRepositoryLoC:   72,
+			},
+			Rust: []models.RustCommand{
+				{
+					RustCommandName:     "whoami",
+					RustRepositoryURL:   "https://github.com/uutils/coreutils/tree/main/src/uu/whoami",
+					RustRepositoryStars: uutilsRepositoryStars,
+					RustRepositoryLoC:   0,
+					TUI:                 "",
+					SponsorsURL:         "",
+				},
+			},
+		},
+		{
+			Original: models.OriginalCommand{
 				OriginalCommandName:     "ffmpeg",
 				OriginalRepositoryURL:   "https://github.com/FFmpeg/FFmpeg",
 				OriginalRepositoryStars: 52539,
