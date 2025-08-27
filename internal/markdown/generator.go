@@ -36,7 +36,6 @@ func GenerateFile(commands []models.CommandTransition, outputPath string) error 
 			mainRust, alternatives = rustCopy[0], rustCopy[1:]
 		}
 
-		altLinks := []string{}
 		var (
 			alternativesMarkdown = make([]string, len(alternatives))
 		)
@@ -68,7 +67,7 @@ func GenerateFile(commands []models.CommandTransition, outputPath string) error 
 				mainRust.RustRepositoryURL,
 				mainRust.RustRepositoryStars,
 				mainRust.RustRepositoryLoC,
-				strings.Join(altLinks, ", "),
+				strings.Join(alternativesMarkdown, ", "),
 				utils.GitHubSearchURL(cmd.Original.OriginalCommandName),
 				utils.GoogleSearchURL(cmd.Original.OriginalCommandName),
 			)
