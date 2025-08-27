@@ -520,5 +520,14 @@ func Commands() []models.CommandTransition {
 			},
 			Rust: []models.RustCommand{},
 		},
+		{
+			Original: models.OriginalCommand{
+				OriginalCommandName:     "htop",
+				OriginalRepositoryURL:   "https://github.com/htop-dev/htop",
+				OriginalRepositoryStars: 7355,
+				OriginalRepositoryLoC:   36119, // https://codetabs.com/count-loc/count-loc-online.html
+			},
+			Rust: []models.RustCommand{},
+		},
 	}
 }

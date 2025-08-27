@@ -6,7 +6,7 @@ It also shows which popular TUIs are commonly used in Rust when rewriting comman
 
 | Command (C) | Repository (C) | Stars (C) | LoC (C) | Command (Rust) | Repository (Rust) | Stars (Rust) | LoC (Rust) | Alternatives | Search more |
 |-------------|----------------|-----------|---------|----------------|-----------------|------------|---------|-------------|-------------|
-| cat | [cat](https://github.com/coreutils/coreutils/blob/master/src/cat.c) | 4700 | 695 | bat | [bat](https://github.com/sharkdp/bat) | 54048 | 0 |  | [GitHub](https://github.com/search?l=Rust&q=%22cat%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22cat%22+AND+%22Rust%22) |
+| cat | [cat](https://github.com/coreutils/coreutils/blob/master/src/cat.c) | 4700 | 695 | bat | [bat](https://github.com/sharkdp/bat) | 54048 | 0 | [cat](https://github.com/uutils/coreutils/tree/main/src/uu/cat) | [GitHub](https://github.com/search?l=Rust&q=%22cat%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22cat%22+AND+%22Rust%22) |
 | chmod | [chmod](https://github.com/coreutils/coreutils/blob/master/src/chmod.c) | 4700 | 566 | chmod | [chmod](https://github.com/uutils/coreutils/tree/main/src/uu/chmod) | 21026 | 0 |  | [GitHub](https://github.com/search?l=Rust&q=%22chmod%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22chmod%22+AND+%22Rust%22) |
 | cp | [cp](https://github.com/coreutils/coreutils/blob/master/src/cp.c) | 4700 | 1116 | cp | [cp](https://github.com/uutils/coreutils/tree/main/src/uu/cp) | 21026 | 0 |  | [GitHub](https://github.com/search?l=Rust&q=%22cp%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22cp%22+AND+%22Rust%22) |
 | du | [du](https://github.com/coreutils/coreutils/blob/master/src/du.c) | 4700 | 963 | du | [du](https://github.com/uutils/coreutils/tree/main/src/uu/du) | 21026 | 0 |  | [GitHub](https://github.com/search?l=Rust&q=%22du%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22du%22+AND+%22Rust%22) |
@@ -36,12 +36,13 @@ It also shows which popular TUIs are commonly used in Rust when rewriting comman
 | curl | [curl](https://github.com/curl/curl) | 38653 | 312057 |  |  |  |  |  | [GitHub](https://github.com/search?l=Rust&q=%22curl%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22curl%22+AND+%22Rust%22) |
 | nano | [nano](https://github.com/madnight/nano) | 142 | 18628 |  |  |  |  |  | [GitHub](https://github.com/search?l=Rust&q=%22nano%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22nano%22+AND+%22Rust%22) |
 | wget | [wget](https://github.com/mirror/wget) | 422 | 50382 |  |  |  |  |  | [GitHub](https://github.com/search?l=Rust&q=%22wget%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22wget%22+AND+%22Rust%22) |
+| htop | [htop](https://github.com/htop-dev/htop) | 7355 | 36119 |  |  |  |  |  | [GitHub](https://github.com/search?l=Rust&q=%22htop%22+language%3ARust&type=repositories) / [Google](https://www.google.com/search?q=site%3Agithub.com+%22htop%22+AND+%22Rust%22) |
 
 Status: ⚠️ Work in progress
 
-The article will be:
-- 🇺🇦 First published in Ukrainian on [DOU](https://dou.ua/lenta/tags/Rust/)
-- 🌍 Later translated and published in English on [Reddit's r/rust](https://www.reddit.com/r/rust/)
+The article is:
+- 🇺🇦 Published in Ukrainian on [DOU](https://dou.ua/forums/topic/55388/)
+- 🌍 Will be translated and later published in English on [Reddit's r/rust](https://www.reddit.com/r/rust/)
 
 Links will be added here after publication.
 
