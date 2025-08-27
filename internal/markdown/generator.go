@@ -18,8 +18,8 @@ func GenerateFile(commands []models.CommandTransition, outputPath string) error 
 	}
 	defer file.Close()
 
-	fmt.Fprintln(file, "| Command (C) | Repository (C) | Stars (C) | LoC (C) | Command (Rust) | Repository (Rust) | Stars (Rust) | LoC (Rust) | Alternatives | Search more |")
-	fmt.Fprintln(file, "|-------------|----------------|-----------|---------|----------------|-----------------|------------|---------|-------------|-------------|")
+	fmt.Fprintln(file, "| Command (C) | Stars (C) | LoC (C) | Command (Rust) | Stars (Rust) | Alternatives | Search more |")
+	fmt.Fprintln(file, "|-------------|-----------|---------|----------------|--------------|--------------|-------------|")
 
 	for _, cmd := range commands {
 		var (
@@ -46,8 +46,7 @@ func GenerateFile(commands []models.CommandTransition, outputPath string) error 
 
 		if len(rustCopy) == 0 {
 			// Немає Rust-реалізацій
-			fmt.Fprintf(file, "| %s | [%s](%s) | %d | %d |  |  |  |  |  | [GitHub](%s) / [Google](%s) |\n",
-				cmd.Original.OriginalCommandName,
+			fmt.Fprintf(file, "| [%s](%s) | %d | %d |  |  |  | [GitHub](%s) / [Google](%s) |\n",
 				cmd.Original.OriginalCommandName,
 				cmd.Original.OriginalRepositoryURL,
 				cmd.Original.OriginalRepositoryStars,
@@ -56,17 +55,14 @@ func GenerateFile(commands []models.CommandTransition, outputPath string) error 
 				utils.GoogleSearchURL(cmd.Original.OriginalCommandName),
 			)
 		} else {
-			fmt.Fprintf(file, "| %s | [%s](%s) | %d | %d | %s | [%s](%s) | %d | %d | %s | [GitHub](%s) / [Google](%s) |\n",
-				cmd.Original.OriginalCommandName,
+			fmt.Fprintf(file, "| [%s](%s) | %d | %d | [%s](%s) | %d | %s | [GitHub](%s) / [Google](%s) |\n",
 				cmd.Original.OriginalCommandName,
 				cmd.Original.OriginalRepositoryURL,
 				cmd.Original.OriginalRepositoryStars,
 				cmd.Original.OriginalRepositoryLoC,
 				mainRust.RustCommandName,
-				mainRust.RustCommandName,
 				mainRust.RustRepositoryURL,
 				mainRust.RustRepositoryStars,
-				mainRust.RustRepositoryLoC,
 				strings.Join(alternativesMarkdown, ", "),
 				utils.GitHubSearchURL(cmd.Original.OriginalCommandName),
 				utils.GoogleSearchURL(cmd.Original.OriginalCommandName),
